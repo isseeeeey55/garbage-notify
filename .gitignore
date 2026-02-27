@@ -1,0 +1,22 @@
+# Terraform
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+*.tfvars
+*.tfvars.json
+
+# Lambda zip artifacts (built locally)
+lambda/lambda.zip
+lambda_webhook/lambda_webhook.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+
+# macOS
+.DS_Store
+
+# Claude Code
+.claude/

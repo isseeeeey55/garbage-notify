@@ -1,6 +1,6 @@
 # garbage-notify
 
-埼玉県川口市のごみ収集日をLINEに通知する AWS Lambda サービスです。毎朝7時にごみ収集スケジュールを自動通知するほか、LINEのトーク画面でごみ品目を検索すると分別方法を返答します。
+埼玉県川口市のごみ収集日を LINE に通知する AWS Lambda サービスです。毎朝7時に当日のごみ収集スケジュールを自動通知するほか、LINE のトーク画面でごみ品目を検索すると分別方法を返答します。
 
 ## 機能
 
@@ -70,6 +70,13 @@ garbage-notify/
 aws ssm put-parameter \
   --name "/garbage-notify/line/channel-access-token" \
   --value "<YOUR_LINE_CHANNEL_ACCESS_TOKEN>" \
+  --type SecureString \
+  --region ap-northeast-1
+
+# LINE チャンネルシークレット（SecureString）Webhook 署名検証に必須
+aws ssm put-parameter \
+  --name "/garbage-notify/line/channel-secret" \
+  --value "<YOUR_LINE_CHANNEL_SECRET>" \
   --type SecureString \
   --region ap-northeast-1
 

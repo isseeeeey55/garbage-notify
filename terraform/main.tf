@@ -35,6 +35,7 @@ resource "aws_iam_role_policy" "lambda_policy" {
           "arn:aws:ssm:${data.aws_region.current.region}:${data.aws_caller_identity.current.account_id}:parameter/garbage-notify/line/channel-secret",
           "arn:aws:ssm:${data.aws_region.current.region}:${data.aws_caller_identity.current.account_id}:parameter/garbage-notify/line/group-id",
           "arn:aws:ssm:${data.aws_region.current.region}:${data.aws_caller_identity.current.account_id}:parameter/garbage-notify/no-collection-dates",
+          "arn:aws:ssm:${data.aws_region.current.region}:${data.aws_caller_identity.current.account_id}:parameter/garbage-notify/district-id",
         ]
       },
       {
